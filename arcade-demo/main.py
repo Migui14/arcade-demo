@@ -35,7 +35,7 @@ os.chdir(file_path)
 
 WIDTH = 800
 HEIGHT = 600
-SPRITE_SCALING = 0.5
+SPRITE_SCALING = 1
 
 class MenuView(arcade.View):
     def on_show(self):
@@ -81,7 +81,7 @@ class GameView(arcade.View):
 
         # Set up the player
         self.score = 0
-        self.player_sprite = arcade.Sprite("pikachu.png", SPRITE_SCALING / 5)
+        self.player_sprite = arcade.Sprite("pikachu.png", SPRITE_SCALING / 10)
         self.player_sprite.center_x = 50
         self.player_sprite.center_y = 50
         self.player_list.append(self.player_sprite)
@@ -89,7 +89,7 @@ class GameView(arcade.View):
         for i in range(5):
 
             # Create the coin instance
-            coin = arcade.Sprite(":resources:images/items/coinGold.png", SPRITE_SCALING / 3)
+            coin = arcade.Sprite(":resources:images/items/coinGold.png", SPRITE_SCALING / 6)
 
             # Position the coin
             coin.center_x = random.randrange(WIDTH)
